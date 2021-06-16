@@ -3,7 +3,6 @@ import sys
 from math import sin,cos,sqrt,radians,degrees
 
 
-
 dis = (1920,1080)
 root = pygame.display.set_mode(dis,pygame.FULLSCREEN)
 cx = dis[0]//2
