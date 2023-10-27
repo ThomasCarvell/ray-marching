@@ -1,8 +1,8 @@
 # rayCasting-Exercise
-A simple, efficient ray caster
+A simple, efficient ray caster as a preliminary exerise into ray marching.
+Uses pygame for gui
 
-This program uses pygame, to install, run the command:
+# Gallery
 
-py -m pip install pygame
-
-After installing pygame the program should run using the python interpreter
+![image](image1.png)
+![image](image2.png)

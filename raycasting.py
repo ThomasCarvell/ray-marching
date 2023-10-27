@@ -4,7 +4,7 @@ from math import sin,cos,sqrt,radians,degrees
 
 
 dis = (1920,1080)
-root = pygame.display.set_mode(dis,pygame.FULLSCREEN)
+root = pygame.display.set_mode(dis,pygame.NOFRAME)
 cx = dis[0]//2
 cy = dis[1]//2
 
@@ -84,8 +84,8 @@ class ray():
     def draw(self,root):
         pygame.draw.line(root,(255,0,0),self.start,self.target)
 
-        #for circle in self.circles:
-         #   pygame.draw.circle(root,(255,0,255),circle[0],circle[1],1)
+        for circle in self.circles:
+            pygame.draw.circle(root,(255,0,255),circle[0],circle[1],1)
             
 
 scene = [circle(dis[0]//2,dis[1]//2,100),rectangle(0,0,1920,50)]
@@ -93,10 +93,10 @@ scene = [circle(dis[0]//2,dis[1]//2,100),rectangle(0,0,1920,50)]
 
 def main(args):
 
-    frame = 0
+    frame = 1
 
     while True:
-        frame += 0.002
+        frame += 0.0002
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
@@ -108,7 +108,7 @@ def main(args):
         mx,my = pygame.mouse.get_pos()
         rays = []
 
-        for i in range(360):
+        for i in range(1):
             rays.append(ray(mx,my,radians(i/8)+frame,scene))
 
         root.fill((0,0,0))
